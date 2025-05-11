@@ -1,34 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kastro's App</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hash's Dev Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      background-color: #0f1117;
+      color: #c9d1d9;
+      font-family: 'Fira Code', monospace;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .terminal-card {
+      background-color: #161b22;
+      border-radius: 12px;
+      padding: 40px;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 0 20px rgba(0, 255, 150, 0.1);
+      border: 1px solid #30363d;
+    }
+
+    .terminal-header {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .dot.red { background-color: #ff5f56; }
+    .dot.yellow { background-color: #ffbd2e; }
+    .dot.green { background-color: #27c93f; }
+
+    h1 {
+      font-size: 1.8rem;
+      color: #58a6ff;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #8b949e;
+      margin-bottom: 30px;
+    }
+
+    button {
+      background-color: #238636;
+      color: #ffffff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 0.95rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2ea043;
+    }
+  </style>
 </head>
 <body>
-    <div class="app-container">
-        <!-- Welcome Message -->
-        <h1 class="app-title">Welcome to Kastro's App</h1>
-
-        <!-- Buttons with YouTube Icons for Docker and Nexus Courses -->
-        <div class="youtube-links">
-            <a href="https://www.youtube.com/playlist?list=PLs-PsDpuAuTeNx3OgGQ1QrpNBo-XE6VBh" target="_blank" class="youtube-button">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/YouTube_icon_%282013-2017%29.png" alt="YouTube Icon" class="youtube-icon">
-                Click Here for Docker Course
-            </a>
-            <a href="https://www.youtube.com/watch?v=opJAfDOCZuI" target="_blank" class="youtube-button">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/YouTube_icon_%282013-2017%29.png" alt="YouTube Icon" class="youtube-icon">
-                Click Here for Nexus Course
-            </a>
-        </div>
-
-        <!-- Footer Message -->
-        <div class="footer">
-            <h2 class="footer-message">Congratulations for learning SonarQube</h2>
-        </div>
+  <div class="terminal-card">
+    <div class="terminal-header">
+      <div class="dot red"></div>
+      <div class="dot yellow"></div>
+      <div class="dot green"></div>
     </div>
+    <h1>// Welcome to Hash's Dev Hub</h1>
+    <p>
+      This minimalistic interface is styled for developers who love the dark side.<br>
+      No distractions—just you and the code.
+    </p>
+    <button onclick="alert('Launch sequence initiated 🚀')">Run App</button>
+  </div>
+</body>
+</html>
+
 
     <script src="app.js"></script>
 </body>

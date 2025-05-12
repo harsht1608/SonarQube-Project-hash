@@ -2,100 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hash's Dev Hub</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DevZone | Hash's Space</title>
   <style>
-    * {
+    body {
       margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      height: 100%;
-      background-color: #0f1117;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0d1117;
       color: #c9d1d9;
-      font-family: 'Fira Code', monospace;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
+      height: 100vh;
       overflow: hidden;
     }
 
-    .terminal-card {
-      background-color: #161b22;
-      border-radius: 12px;
-      padding: 40px;
-      max-width: 600px;
-      width: 90%;
-      box-shadow: 0 0 20px rgba(0, 255, 150, 0.1);
+    .container {
+      text-align: center;
+      padding: 2rem;
       border: 1px solid #30363d;
+      border-radius: 12px;
+      background-color: #161b22;
+      box-shadow: 0 0 12px rgba(240, 246, 252, 0.1);
+      max-width: 500px;
     }
-
-    .terminal-header {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 20px;
-    }
-
-    .dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-    }
-
-    .dot.red { background-color: #ff5f56; }
-    .dot.yellow { background-color: #ffbd2e; }
-    .dot.green { background-color: #27c93f; }
 
     h1 {
-      font-size: 1.8rem;
+      font-size: 2rem;
       color: #58a6ff;
-      margin-bottom: 20px;
+      margin-bottom: 0.5rem;
     }
 
     p {
       font-size: 1rem;
-      line-height: 1.6;
       color: #8b949e;
-      margin-bottom: 30px;
+      margin-bottom: 1.5rem;
     }
 
-    button {
+    .btn {
+      display: inline-block;
       background-color: #238636;
-      color: #ffffff;
-      border: none;
-      padding: 12px 24px;
-      font-size: 0.95rem;
-      border-radius: 6px;
-      cursor: pointer;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
       transition: background 0.3s ease;
     }
 
-    button:hover {
+    .btn:hover {
       background-color: #2ea043;
+    }
+
+    .footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #6e7681;
     }
   </style>
 </head>
 <body>
-  <div class="terminal-card">
-    <div class="terminal-header">
-      <div class="dot red"></div>
-      <div class="dot yellow"></div>
-      <div class="dot green"></div>
-    </div>
-    <h1>// Welcome to Hash's Dev Hub</h1>
-    <p>
-      This minimalistic interface is styled for developers who love the dark side.<br>
-      No distractions—just you and the code.
-    </p>
-    <button onclick="alert('Launch sequence initiated 🚀')">Run App</button>
+  <div class="container">
+    <h1>Welcome, Dev!</h1>
+    <p>You've entered Hash's dark terminal-inspired zone.</p>
+    <a class="btn" href="https://www.youtube.com/@TechWithHash" target="_blank">Explore YouTube</a>
+    <div class="footer">© 2025 Hash. All rights reserved.</div>
   </div>
-</body>
-</html>
-
-
-    <script src="app.js"></script>
 </body>
 </html>

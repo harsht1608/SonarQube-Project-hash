@@ -1,6 +1,6 @@
-											SonarQube - Code Quality Analysis
-														by
-													Kastro Kiran V
+✨--------------------------------------------------------------------------------------------------SonarQube - Code Quality Analysis------------------------------------------------------------------------------------------------------✨
+
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Step 1: Launch Ubuntu VM with instance type as t2.large, AMI: 24.04, Storage: 25 GB, No. of instances: 1
 
@@ -21,7 +21,7 @@ echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
 sudo apt-get update
 sudo apt-get install jenkins -y
 
-vi j.sh
+vi jenkins.sh
 <Paste the above commands>
 
 esc --- :wq
@@ -83,5 +83,3 @@ Similarly configure dockerhub credentials with id as "dockerhub-credentials" wit
 
 Manage Jenkins --- System --- Scroll down to 'SonarQube servers' --- Click on 'Add SonarQube' --- Name: sonar-server --- ServerURL: <PublicIPofSQinstalledVM>:9000 --- Server Authentication Token: select 'sonar-token' --- Apply --- Save
 
-
-<For the next steps, please watch the video>

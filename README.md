@@ -1,29 +1,145 @@
-# SonarQube in 60 Minutes by Kastro
+# SonarQube Project with Spring Boot
 
-This is a One-Stop solution real-time project on SonarQube to perform Code Quality Analysis. In this video, I have integrated Jenkins with Maven, SonarQube, and Docker, where the application will be accessed while running inside a container.
+This project demonstrates the implementation of SonarQube code quality analysis with a Spring Boot application using Jenkins pipeline for CI/CD.
 
-## 🎥 Course Links
+## Project Overview
 
-- [Docker Playlist](https://www.youtube.com/playlist?list=PLs-PsDpuAuTeNx3OgGQ1QrpNBo-XE6VBh)
-- [Explore AWS Tutorials](https://www.youtube.com/playlist?list=PLs-PsDpuAuTdOcZa-DDgG8KRbtMI_XRrC)
-- [Nexus YouTube Video Link](https://youtu.be/opJAfDOCZuI)
+This is a simple Spring Boot web application that serves as a demonstration for setting up:
+- SonarQube code quality analysis
+- Jenkins CI/CD pipeline
+- Docker containerization
+- Automated deployment
 
-## 🤝 Connect with Me
+## Prerequisites
 
-For networking and further discussions, feel free to connect with me!
+- JDK 17
+- Maven 3.x
+- Docker
+- Jenkins
+- SonarQube
+- Ubuntu server (t2.large or equivalent)
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kastro-kiran/)
-[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/EGw6ZlwUHZc82cA0vXFnwm) - Join the DevOps technical discussions!
+## Tech Stack
 
-## 💬 Share Your Thoughts
+- **Backend:** Spring Boot 2.7.5
+- **Frontend:** Thymeleaf, HTML, CSS
+- **Build Tool:** Maven
+- **CI/CD:** Jenkins
+- **Code Quality:** SonarQube
+- **Containerization:** Docker
+- **Server:** Ubuntu 24.04
 
-Your feedback is highly valuable! Feel free to share your opinions and suggestions in the **Comments section** of the videos.
+## Local Development Setup
 
-## 🎉 Happy Learning!
+1. Clone the repository:
+```bash
+git clone https://github.com/YourUsername/SonarQube-Project-hash.git
+cd SonarQube-Project-hash
+```
 
-Stay committed, stay curious, and let’s build a strong DevOps foundation together.
+2. Build the project:
+```bash
+mvn clean install
+```
 
----
+3. Run the application:
+```bash
+java -jar target/spotify-app-1.0.0.jar
+```
 
-<p align="center">
-    <img src="https://media.licdn.com/dms/image/v2/D5603AQHJB_lF1d9OSw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718971147172?e=1733356800&v=beta&t=bz-SXs7FHwIDqQ9xlPibErrGvpHDdAjMJEr9WqHsi9A" alt="Kastro Profile Image
+The application will be available at `http://localhost:5555`
+
+## Infrastructure Setup
+
+### 1. Jenkins Setup
+
+1. Install Jenkins on Ubuntu:
+```bash
+sudo apt install openjdk-17-jre-headless -y
+# Follow Jenkins installation steps from Jenkins.io
+```
+
+2. Required Jenkins Plugins:
+- SonarQube Scanner
+- Eclipse Temurin installer
+- Pipeline Stage View
+
+### 2. SonarQube Setup
+
+1. Install using Docker:
+```bash
+sudo apt install docker.io
+sudo chmod 666 /var/run/docker.sock
+docker run -d --name sonarqube -p 9000:9000 sonarqube:lts-community
+```
+
+2. Access SonarQube at: `http://<your-server-ip>:9000`
+   - Default credentials: admin/admin
+
+### 3. Jenkins Pipeline Configuration
+
+1. Configure tools in Jenkins:
+   - JDK 17
+   - Maven 3
+   - SonarQube Scanner
+
+2. Add credentials:
+   - SonarQube token
+   - Docker Hub credentials
+
+3. Configure SonarQube server in Jenkins:
+   - Add SonarQube server details
+   - Configure authentication token
+
+## Deployment
+
+The project uses a Jenkins pipeline for automated deployment:
+
+1. Code checkout from Git
+2. Compilation and testing
+3. SonarQube analysis
+4. Building JAR file
+5. Docker image creation
+6. Push to Docker Hub
+7. Container deployment
+
+## Application Structure
+
+```
+src/
+├── main/
+│   ├── java/
+│   │   └── com/
+│   │       └── hash/
+│   │           └── spotify/
+│   │               ├── Application.java
+│   │               └── HomeController.java
+│   └── resources/
+│       ├── static/
+│       │   ├── css/
+│       │   └── js/
+│       └── templates/
+│           └── index.html
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a new Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Author
+
+Kastro Kiran V
+
+## Acknowledgments
+
+- Spring Boot team
+- SonarQube community
+- Jenkins community

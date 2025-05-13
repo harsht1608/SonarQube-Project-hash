@@ -1,4 +1,4 @@
-package com.kastro.spotify;
+package com.hash.spotify;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
